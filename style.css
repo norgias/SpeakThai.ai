@@ -31,11 +31,11 @@ header h1 {
 
 /* Applying the font and glow effect */
 .glowing-text {
-  font-family: "Veranda, Geneva, sans-serif"; /* Custom font */
+  font-family: "Impact", sans-serif; /* Custom font */
   font-size: 2rem; /* Adjust size as needed */
   color: white; /* Base font color */
   text-align: center; /* Center alignment */
-  text-shadow: 0 0 5px #000080, 0 0 10px #000080, 0 0 15px #000080, 0 0 20px #0000cd, 0 0 25px #0000cd, 0 0 30px #0000cd; /* Navy blue glowing effect */
+  text-shadow: 0 0 5px #001A4D, 0 0 10px #001A4D, 0 0 15px #001A4D, 0 0 20px #003366, 0 0 25px #003366, 0 0 30px #003366; /* Thai flag blue glowing effect */
   margin: 20px;
 }
 
