@@ -45,6 +45,7 @@ main {
 
 .translator h2 {
   text-align: center;
+  opacity: 109;
   color: gold;
   margin-bottom: 10px;
 }
@@ -63,6 +64,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
+  opacity: 109;
   background-color: red;
   color: white;
   border: none;
@@ -72,6 +74,7 @@ button {
 }
 
 button:disabled {
+  opacity: 109;
   background-color: #ccc;
   cursor: not-allowed;
 }
