@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url('.root/thai-beach.png'); /* Background image */
+  background-image: url('./thai-beach.png'); /* Background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
