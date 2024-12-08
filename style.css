@@ -35,7 +35,7 @@ header h1 {
   font-size: 2rem; /* Adjust size as needed */
   color: white; /* Base font color */
   text-align: center; /* Center alignment */
-  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff6600, 0 0 25px #ff6600, 0 0 30px #ff6600; /* Glowing effect */
+  text-shadow: 0 0 5px #000080, 0 0 10px #000080, 0 0 15px #000080, 0 0 20px #0000cd, 0 0 25px #0000cd, 0 0 30px #0000cd; /* Navy blue glowing effect */
   margin: 20px;
 }
 
