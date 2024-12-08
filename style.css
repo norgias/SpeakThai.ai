@@ -13,17 +13,17 @@ body {
 
 /* Header */
 header {
-  background-color: rgba(0, 102, 204, 0.7); /* Semi-transparent gold */
+  background-color: rgba(165, 25, 49, 0.7); /* Semi-transparent gold */
   color: white;
   text-align: center;
   padding: 20px 0;
-  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   font-size: 2rem;
   margin: 0;
-  color: red;
+  color: white;
 }
 
 /* Main Section */
@@ -35,7 +35,7 @@ main {
 }
 
 .translator {
-  background-color: rgba(255, 255, 255, 0.86); /* 25% opacity for background */
+  background-color: rgba(45, 42, 74, 0.9); /* 25% opacity for background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -94,7 +94,7 @@ footer {
   text-align: center;
   margin-top: 20px;
   padding: 10px;
-  background-color: rgba(0, 102, 204, 0.7);
+  background-color: rgba(165, 25, 49, 0.7);
   color: white;
   position: fixed;
   bottom: 0;
