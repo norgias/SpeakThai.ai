@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakThai.ai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SpeakThai.ai</h1>
+  </header>
+
+  <main>
+    <section class="translator">
+      <h2>Type in English and Translate to Thai</h2>
+      <textarea id="englishInput" placeholder="Type something in English..."></textarea>
+      <button id="translateButton">Translate</button>
+      
+      <div id="outputSection">
+        <p><strong>Translation:</strong></p>
+        <p id="thaiOutput"></p>
+        <button id="speakButton" disabled>Hear Pronunciation</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 SpeakThai.ai. All Rights Reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
