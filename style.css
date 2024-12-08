@@ -26,6 +26,19 @@ header h1 {
   color: white;
 }
 
+/* Importing a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Applying the font and glow effect */
+.glowing-text {
+  font-family: 'Roboto', sans-serif; /* Custom font */
+  font-size: 2rem; /* Adjust size as needed */
+  color: white; /* Base font color */
+  text-align: center; /* Center alignment */
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff6600, 0 0 25px #ff6600, 0 0 30px #ff6600; /* Glowing effect */
+  margin: 20px;
+}
+
 /* Main Section */
 main {
   display: flex;
