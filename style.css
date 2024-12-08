@@ -88,7 +88,7 @@ button {
 
 button:disabled {
   opacity: 109;
-  background-color: rbga(45, 42, 74,);
+  background-color: black);
   cursor: not-allowed;
 }
 
