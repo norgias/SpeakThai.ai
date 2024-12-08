@@ -31,7 +31,7 @@ header h1 {
 
 /* Applying the font and glow effect */
 .glowing-text {
-  font-family: "Veranda", Geneva, sans-serif; /* Custom font */
+  font-family: "Veranda, Geneva, sans-serif"; /* Custom font */
   font-size: 2rem; /* Adjust size as needed */
   color: white; /* Base font color */
   text-align: center; /* Center alignment */
