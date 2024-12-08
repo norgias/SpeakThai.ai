@@ -10,6 +10,9 @@ body {
   background-attachment: fixed;
   background-color: #f0f0f0; /* Fallback background color */
   color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
 }
 
 /* Header */
@@ -32,6 +35,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1; /* Ensures main section takes up remaining space */
   padding: 20px;
 }
 
@@ -42,7 +46,7 @@ main {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   width: 80%;
-  opacity: 0.95; /* Slight transparency */
+  opacity: 0.75%; /* Slight transparency */
 }
 
 .translator h2 {
@@ -95,6 +99,7 @@ footer {
   padding: 10px;
   background-color: #333;
   color: white;
+  flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
 /* Responsive Styles */
