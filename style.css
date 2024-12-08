@@ -4,10 +4,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url('./thai-beach.png'); /* Background image */
+  background-image: url('./thai-beach.png'); /* Ensure the path is correct */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: #f0f0f0; /* Fallback background color */
   color: #333;
 }
 
