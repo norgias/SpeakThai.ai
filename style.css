@@ -46,7 +46,7 @@ main {
 .translator h2 {
   text-align: center;
   opacity: 109;
-  color: gold;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -75,7 +75,7 @@ button {
 
 button:disabled {
   opacity: 109;
-  background-color: #ccc;
+  background-color: rbga(45, 42, 74,);
   cursor: not-allowed;
 }
 
@@ -85,7 +85,7 @@ button:disabled {
 
 #thaiOutput {
   font-size: 1.2rem;
-  color: #333;
+  color: white;
   margin: 10px 0;
 }
 
