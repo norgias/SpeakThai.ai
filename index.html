@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head> 
+<html lang="en">
+<head>
   <!--existing meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
   <meta http-equiv="Expires" content="0"> 
   
   <title>SpeakThai.ai</title>
-  <link rel="stylesheet" href="style.css?v=1.8">
+  <link rel="stylesheet" href="style.css?v=1.9">
 </head>
 <body>
   <header>
@@ -18,6 +18,7 @@
   </header>
 
   <main>
+    <!-- First Translator Section -->
     <section class="translator">
       <h2>Type in English and Translate to Thai</h2>
       <textarea id="englishInput" placeholder="Type something in English..."></textarea>
@@ -27,6 +28,18 @@
         <p style="color:white;"><strong>Translation:</strong></p>
         <p id="thaiOutput"></p>
         <button id="speakButton" disabled>Hear Pronunciation</button>
+      </div>
+    </section>
+
+    <!-- Second Translator Section -->
+    <section class="translator">
+      <h2>Speak Thai and Translate to English</h2>
+      <button id="recordButton">Record</button>
+      <p id="recordingStatus" style="color:white; margin-top:10px;">Press the button to start recording...</p>
+      
+      <div id="voiceOutputSection">
+        <p style="color:white;"><strong>Translation:</strong></p>
+        <p id="englishOutput"></p>
       </div>
     </section>
   </main>
