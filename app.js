@@ -1,4 +1,4 @@
-// Function to Translate Text (First Section)
+// First Translator Section: English to Thai
 document.getElementById('translateButton').addEventListener('click', async () => {
   const englishText = document.getElementById('englishInput').value;
 
@@ -22,7 +22,7 @@ document.getElementById('translateButton').addEventListener('click', async () =>
   }
 });
 
-// Function to Pronounce Thai Text
+// Pronounce Thai Text
 document.getElementById('speakButton').addEventListener('click', () => {
   const thaiText = document.getElementById('speakButton').dataset.text;
 
@@ -31,8 +31,9 @@ document.getElementById('speakButton').addEventListener('click', () => {
   speechSynthesis.speak(utterance);
 });
 
-// Function to Record Audio and Translate (Second Section)
+// Second Translator Section: Thai Speech to English
 const recordButton = document.getElementById('recordButton');
+const stopButton = document.getElementById('stopButton');
 const recordingStatus = document.getElementById('recordingStatus');
 const englishOutput = document.getElementById('englishOutput');
 const englishSpeakButton = document.getElementById('englishSpeakButton');
@@ -44,16 +45,20 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
   recognition.lang = 'th-TH';
   recognition.continuous = false;
 
-  // Start recording when holding down the button
-  recordButton.addEventListener('mousedown', () => {
+  // Start recording
+  recordButton.addEventListener('click', () => {
     recordingStatus.textContent = 'Recording... Speak now!';
     recognition.start();
+    recordButton.disabled = true;
+    stopButton.disabled = false;
   });
 
-  // Stop recording and process when the button is released
-  recordButton.addEventListener('mouseup', async () => {
+  // Stop recording
+  stopButton.addEventListener('click', async () => {
     recordingStatus.textContent = 'Analyzing... Please wait.';
     recognition.stop();
+    recordButton.disabled = false;
+    stopButton.disabled = true;
 
     recognition.onresult = async (event) => {
       const spokenText = event.results[0][0].transcript;
@@ -64,25 +69,27 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
         const englishTranslation = data.responseData.translatedText;
 
         englishOutput.textContent = englishTranslation;
-        recordingStatus.textContent = 'Press and hold the button to record again.';
+        recordingStatus.textContent = 'Recording complete. You can start again.';
         englishSpeakButton.disabled = false;
         englishSpeakButton.dataset.text = englishTranslation;
       } catch (error) {
         console.error(error);
-        alert('Error translating. Please try again.');
-        recordingStatus.textContent = 'Press and hold the button to record again.';
+        alert('Error translating. Please try again later.');
+        recordingStatus.textContent = 'Press "Start Recording" to try again.';
       }
     };
 
     recognition.onerror = () => {
       recordingStatus.textContent = 'Recording failed. Please try again.';
+      recordButton.disabled = false;
+      stopButton.disabled = true;
     };
   });
 } else {
   alert('Speech recognition is not supported in your browser.');
 }
 
-// Function to Pronounce English Output
+// Pronounce English Output
 englishSpeakButton.addEventListener('click', () => {
   const englishText = englishSpeakButton.dataset.text;
 
