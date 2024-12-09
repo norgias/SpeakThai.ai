@@ -1,10 +1,10 @@
-/* Global Styles (same as before) */
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url('./thai-beach.png');
+  background-image: url('./thai-beach.png'); /* Background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -26,12 +26,16 @@ header h1 {
   color: white;
 }
 
-/* Glowing Text */
+/* Importing a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Applying the font and glow effect */
 .glowing-text {
-  font-family: "Impact", sans-serif;
-  font-size: 2rem;
-  color: white;
-  text-shadow: 0 0 5px #001A4D, 0 0 10px #001A4D, 0 0 15px #001A4D, 0 0 20px #003366, 0 0 25px #003366, 0 0 30px #003366;
+  font-family: "Impact", sans-serif; /* Custom font */
+  font-size: 2rem; /* Adjust size as needed */
+  color: white; /* Base font color */
+  text-align: center; /* Center alignment */
+  text-shadow: 0 0 5px #001A4D, 0 0 10px #001A4D, 0 0 15px #001A4D, 0 0 20px #003366, 0 0 25px #003366, 0 0 30px #003366; /* Thai flag blue glowing effect */
   margin: 20px;
 }
 
@@ -41,21 +45,21 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .translator {
-  background-color: rgba(45, 42, 74, 0.9);
+  background-color: rgba(45, 42, 74, 0.9); /* 25% opacity for background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   width: 80%;
-  margin-bottom: 40px; /* Space between translators */
+  margin-bottom: 60px; /* Increased spacing to allow room for advertisement */
 }
 
 .translator h2 {
   text-align: center;
+  opacity: 109;
   color: white;
   margin-bottom: 10px;
 }
@@ -74,6 +78,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
+  opacity: 109;
   background-color: red;
   color: white;
   border: none;
@@ -83,15 +88,17 @@ button {
 }
 
 button:disabled {
-  background-color: gray;
+  opacity: 109;
+  background-color: yellow;
   cursor: not-allowed;
 }
 
-#outputSection, #voiceOutputSection {
+#outputSection {
   margin-top: 20px;
 }
 
-#thaiOutput, #englishOutput {
+#thaiOutput,
+#englishOutput {
   font-size: 1.2rem;
   color: white;
   margin: 10px 0;
@@ -107,4 +114,36 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Advertisement Placeholder */
+.ad-placeholder {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(200, 200, 200, 0.7);
+  border: 1px dashed #ccc;
+  text-align: center;
+  line-height: 100px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 60px; /* Adds space below ad placeholder */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .translator {
+    padding: 15px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
 }
