@@ -1,4 +1,4 @@
-/* Global Styles */
+ /* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -36,4 +36,67 @@ header h1 {
   color: white; /* Base font color */
   text-align: center; /* Center alignment */
   text-shadow: 0 0 5px #001A4D, 0 0 10px #001A4D, 0 0 15px #001A4D, 0 0 20px #003366, 0 0 25px #003366, 0 0 30px #003366; /* Thai flag blue glowing effect */
- 
+  margin: 20px;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.translator {
+  background-color: rgba(45, 42, 74, 0.9); /* 25% opacity for background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 80%;
+  margin-bottom: 100px; /* Increased spacing to allow room for advertisement */
+}
+
+.translator h2 {
+  text-align: center;
+  opacity: 109;
+  color: white;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#outputSection, #voiceOutputSection {
+  margin-top: 20px;
+}
+
+#thaiOutput,
+#englishOutput {
+  font-size: 1.2rem;
+  color: white;
+  margin: 10
