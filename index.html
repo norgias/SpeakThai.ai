@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0"> 
   <title>SpeakThai.ai</title>
-  <link rel="stylesheet" href="style.css?v=2.2">
+  <link rel="stylesheet" href="style.css?v=2.3">
 </head>
 <body>
   <header>
@@ -34,8 +34,9 @@
     <!-- Second Translator Section -->
     <section class="translator">
       <h2>Speak Thai and Translate to English</h2>
-      <button id="recordButton">Press and Hold to Record</button>
-      <p id="recordingStatus" style="color:white; margin-top:10px;">Press and hold the button to record Thai speech. Release to translate.</p>
+      <button id="recordButton">Start Recording</button>
+      <button id="stopButton" disabled>Stop Recording</button>
+      <p id="recordingStatus" style="color:white; margin-top:10px;">Press "Start Recording" to begin.</p>
       
       <div id="voiceOutputSection">
         <p style="color:white;"><strong>Translation:</strong></p>
@@ -49,6 +50,6 @@
     <p>© 2024 SpeakThai.ai. All Rights Reserved.</p>
   </footer>
 
-  <script src="app.js?v=1.3"></script>
+  <script src="app.js?v=1.4"></script>
 </body>
 </html>
