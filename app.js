@@ -1,3 +1,18 @@
+// Function to request microphone access
+async function requestMicrophoneAccess() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    console.log("Microphone access granted.");
+    // Stop all tracks after permission is granted
+    stream.getTracks().forEach(track => track.stop());
+    return true;
+  } catch (error) {
+    console.error("Microphone access denied:", error.message);
+    alert("Microphone access is required to use this feature. Please allow microphone access in your browser settings.");
+    return false;
+  }
+}
+
 // First Translator Section: English to Thai
 document.getElementById('translateButton').addEventListener('click', async () => {
   const englishText = document.getElementById('englishInput').value;
@@ -46,7 +61,13 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
   recognition.continuous = false;
 
   // Start recording
-  recordButton.addEventListener('click', () => {
+  recordButton.addEventListener('click', async () => {
+    const hasPermission = await requestMicrophoneAccess();
+    if (!hasPermission) {
+      recordingStatus.textContent = 'Microphone permission is required.';
+      return;
+    }
+
     recordingStatus.textContent = 'Recording... Speak now!';
     recognition.start();
     recordButton.disabled = true;
