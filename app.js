@@ -29,7 +29,7 @@ document.getElementById('translateButton').addEventListener('click', async () =>
 
     document.getElementById('thaiOutput').textContent = thaiTranslation;
     document.getElementById('speakButton').disabled = false;
-    document.getElementById('speakButton').dataset.text = thaiTranslation;
+    document.getElementById('speakButton').dataset.text = thaiTranslation; // Store translation in dataset
 
   } catch (error) {
     console.error(error);
@@ -39,10 +39,15 @@ document.getElementById('translateButton').addEventListener('click', async () =>
 
 // Pronounce Thai Text
 document.getElementById('speakButton').addEventListener('click', () => {
-  const thaiText = document.getElementById('speakButton').dataset.text;
+  const thaiText = document.getElementById('speakButton').dataset.text; // Retrieve the Thai translation from dataset
+
+  if (!thaiText) {
+    alert('No translation available to pronounce.');
+    return;
+  }
 
   const utterance = new SpeechSynthesisUtterance(thaiText);
-  utterance.lang = 'th-TH';
+  utterance.lang = 'th-TH'; // Set Thai language for pronunciation
   speechSynthesis.speak(utterance);
 });
 
@@ -114,7 +119,12 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
 englishSpeakButton.addEventListener('click', () => {
   const englishText = englishSpeakButton.dataset.text;
 
+  if (!englishText) {
+    alert('No English translation available to pronounce.');
+    return;
+  }
+
   const utterance = new SpeechSynthesisUtterance(englishText);
-  utterance.lang = 'en-US';
+  utterance.lang = 'en-US'; // Set English language for pronunciation
   speechSynthesis.speak(utterance);
 });
