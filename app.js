@@ -110,23 +110,7 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
   alert('Speech recognition is not supported in your browser.');
 }
 
-// Send recorded audio to the server for processing
-async function processAudio(blob) {
-  const formData = new FormData();
-  formData.append('audio', blob);
 
-  try {
-    const response = await fetch('http://localhost:5000/recognize', {
-      method: 'POST',
-      body: formData,
-    });
-    const data = await response.json();
-    document.getElementById('englishOutput').textContent = data.transcription;
-  } catch (error) {
-    console.error('Error processing audio:', error);
-    alert('Failed to process audio. Please try again.');
-  }
-}
 
 // Pronounce English Output
 englishSpeakButton.addEventListener('click', () => {
