@@ -128,8 +128,6 @@ async function processAudio(blob) {
   }
 }
 
-
-
 // Pronounce English Output
 englishSpeakButton.addEventListener('click', () => {
   const englishText = englishSpeakButton.dataset.text;
